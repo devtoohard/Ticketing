@@ -7,13 +7,13 @@ interface TicketAttrs {
 }
 
 interface TicketDoc extends mongoose.Document {
-  title: number;
+  title: string;
   price: number;
   userId: string;
 }
 
 interface TicketModel extends mongoose.Model<TicketDoc> {
-  build(atrrs: TicketAttrs): TicketDoc;
+  build(attrs: TicketAttrs): TicketDoc;
 }
 
 const ticketSchema = new mongoose.Schema(
