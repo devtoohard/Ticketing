@@ -16,7 +16,7 @@ spec:
         - name: tickets
           image: us.gcr.io/ticket-dev-299116/tickets
           env:
-            - name: NATS_CLIENT_UD
+            - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
